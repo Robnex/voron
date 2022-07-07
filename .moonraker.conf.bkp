@@ -25,6 +25,7 @@ cors_domains =
 	http://*.local
 	http://*://my.mainsail.xyz
 	http://*://app.fluidd.xyz
+	http://*:7136  #<--Allow PrettyGCode (port 7136) on all domains (recommended) OR...
 
 [octoprint_compat]
 
@@ -41,16 +42,8 @@ refresh_interval = 168
 
 [update_manager mainsail]
 type = web
-channel = beta
 repo = mainsail-crew/mainsail
 path = ~/mainsail
-
-[update_manager client z_calibration]
-type = git_repo
-path = ~/klipper_z_calibration
-origin = https://github.com/protoloft/klipper_z_calibration.git
-install_script = install.sh
-managed_services = klipper
 
 [update_manager timelapse]
 type = git_repo
